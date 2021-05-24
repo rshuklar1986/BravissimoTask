@@ -17,10 +17,10 @@ const SearchContainer = (props) => {
         try {
           await axios
             .get(
-              `https://www.bravissimo.com/api/search/${searchTerm}`,
+              `https://sandbox368.bravissimo.site/api/search/${searchTerm}`,
               { headers }
             )
-            .then((resp) => setResponse(resp));
+            .then((resp) => setResponse(resp.data.items));
         } catch (err) {
           console.log("ERROR FETCHING ITEM: ", err.message);
         } finally {
