@@ -32,7 +32,10 @@ const Search = (props) => {
             props.searchResults
               .map((item) => (
                 <div className={"Results"}>
-                  <>{item}</>
+                  <div>Style Name: {item.styleName}</div>
+                  <div>Style Colour Code: {item.colour.styleColourCode}</div>
+                  <div>Style Colour Name: {item.colour.name}</div>
+                  <div>Price: {item.colour.pricing.price}</div>
                 </div>
               ))}
           </div>
